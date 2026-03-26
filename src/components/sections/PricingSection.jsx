@@ -26,10 +26,10 @@ const PricingSection = () => {
           className="text-center mb-8"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-            Einmal zahlen. Für immer Zugang.
+            Einmal zahlen. Kein Abo.
           </h2>
           <p className="text-lg text-slate-500">
-            Kein Abo. Du zahlst einmal und hast für immer Zugang zu allen Modulen, Updates und der Community.
+            Du zahlst einmal und hast uneingeschränkt Zugang zu allen Modulen, Updates und der Community.
           </p>
         </motion.div>
 

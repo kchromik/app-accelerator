@@ -16,10 +16,6 @@ const faqData = [
     answer: "Das liegt fast immer am Prompting, also an der Art, wie du deine Anfragen stellst. Wenn du der KI schlechte Anweisungen gibst, bekommst du schlechte Ergebnisse. Im App Accelerator bekommst du bewährte Vorlagen und Workflows, mit denen du sofort zu soliden Ergebnissen in der Softwareentwicklung kommst."
   },
   {
-    question: "Wie lange habe ich Zugriff auf die Inhalte?",
-    answer: "Für immer. Du kaufst einmal und behältst den Zugang zu allen Modulen, Updates und der Community. Es gibt kein Ablaufdatum."
-  },
-  {
     question: "Brauche ich für den Kurs Zusatzabos?",
     answer: "Wir arbeiten hauptsächlich mit Claude Code, weil das momentan die beste KI für Programmierung ist. Die Pro-Version kostet ca. 20 Euro pro Monat. Es ist auf jeden Fall sinnvoll, damit zu arbeiten, weil du damit deutlich bessere Ergebnisse bekommst."
   },

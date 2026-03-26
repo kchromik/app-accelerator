@@ -18,7 +18,7 @@ const withItems = [
 
 const ProblemSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-white border-t border-[#EEEEEE]">
+    <section className="py-20 md:py-28 bg-white">
       <div className="max-w-5xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

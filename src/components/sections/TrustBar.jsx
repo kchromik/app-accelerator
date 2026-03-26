@@ -16,7 +16,7 @@ const TrustBar = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
       viewport={{ once: true }}
-      className="py-6 bg-white border-t border-[#EEEEEE]"
+      className="py-6 bg-white"
     >
       <div className="max-w-4xl mx-auto px-6">
         <div className="flex flex-wrap justify-center gap-6 md:gap-10">

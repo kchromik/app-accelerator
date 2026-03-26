@@ -22,7 +22,7 @@ const painPoints = [
 
 const PainSection = () => {
   return (
-    <section id="pain" className="py-20 md:py-28 bg-white border-t border-[#EEEEEE]">
+    <section id="pain" className="py-20 md:py-28 bg-slate-50">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

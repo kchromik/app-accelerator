@@ -16,7 +16,7 @@ const features = [
 
 const PricingSection = () => {
   return (
-    <section id="pricing" className="py-20 md:py-28 bg-white border-t border-[#EEEEEE]">
+    <section id="pricing" className="py-20 md:py-28 bg-white">
       <div className="max-w-lg mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

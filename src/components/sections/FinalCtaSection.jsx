@@ -10,7 +10,7 @@ const FinalCtaSection = ({ scrollToPricing }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
       viewport={{ once: true, margin: "-50px" }}
-      className="py-20 md:py-28 bg-white border-t border-[#EEEEEE]"
+      className="py-20 md:py-28 bg-white"
     >
       <div className="max-w-2xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">

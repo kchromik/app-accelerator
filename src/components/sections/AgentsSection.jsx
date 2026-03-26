@@ -137,7 +137,7 @@ const DepartmentCard = ({ dept, index }) => {
 
 const AgentsSection = () => {
   return (
-    <section id="agents" className="py-20 md:py-28 bg-slate-50/50 border-t border-[#EEEEEE]">
+    <section id="agents" className="py-20 md:py-28 bg-slate-50">
       <div className="max-w-3xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

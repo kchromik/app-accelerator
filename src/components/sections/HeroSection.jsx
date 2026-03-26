@@ -84,7 +84,7 @@ const HeroSection = ({ scrollToPricing }) => {
               transition={{ duration: 0.5, delay: 0.9 }}
               className="text-lg text-slate-500 max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed"
             >
-              Lerne, wie du mit modernen KI-Tools Apps entwickelst, die du in 30 Tagen in die Stores bringst.
+              Entwickle mit <span className="text-slate-700 font-medium">Claude Code</span> deine eigene App und bring sie in 30 Tagen in die Stores.
             </motion.p>
 
             <motion.div

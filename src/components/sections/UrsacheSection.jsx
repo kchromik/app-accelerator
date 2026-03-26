@@ -48,7 +48,7 @@ const UrsacheSection = () => {
           className="max-w-2xl mx-auto text-center mb-14"
         >
           <p className="text-slate-600 leading-relaxed">
-            Du hast KI ausprobiert, aber die Ergebnisse waren okay, nicht wirklich gut. Das liegt nicht an der KI. Es liegt daran, wie du sie einsetzt. Ohne den richtigen Workflow wirst du das volle Potenzial von KI nie ausschoepfen.
+            Du hast KI ausprobiert, aber die Ergebnisse waren okay, nicht wirklich gut. Das liegt nicht an der KI. Es liegt daran, wie du sie einsetzt. Ohne den richtigen Workflow wirst du das volle Potenzial von KI nie ausschöpfen.
           </p>
         </motion.div>
 

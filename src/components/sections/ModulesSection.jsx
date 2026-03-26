@@ -94,7 +94,7 @@ const modules = [
 
 const bonusItems = [
   "25 vorkonfigurierte KI-Agenten für App-Entwicklung",
-  "Lifetime Zugang zur Discord-Community",
+  "Zugang zur Discord-Community",
   "Alle zukünftigen Updates inklusive",
 ];
 
@@ -127,8 +127,7 @@ const ModuleAccordion = ({ mod, index }) => {
             <h3 className="text-sm font-semibold text-slate-900">{mod.title}</h3>
             {mod.highlight && (
               <span className="inline-flex items-center gap-1 text-xs font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded-full">
-                <Star className="w-3 h-3" />
-                Herzstück
+                <img src="/images/claude_logo.png" alt="Claude" className="h-3" />
               </span>
             )}
             {mod.bonus && (

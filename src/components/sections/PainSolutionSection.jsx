@@ -46,7 +46,7 @@ const solutions = [
   {
     icon: Users,
     title: "Community die mitzieht",
-    description: "Lifetime-Zugang zur Discord-Community. Fragen stellen, Feedback bekommen, voneinander lernen."
+    description: "Zugang zur Discord-Community. Fragen stellen, Feedback bekommen, voneinander lernen."
   }
 ];
 

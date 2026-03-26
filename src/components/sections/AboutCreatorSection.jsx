@@ -59,10 +59,6 @@ const AboutCreatorSection = () => {
                 10+ Jahre App-Entwicklung
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-50 rounded-full text-sm text-slate-700 border border-[#EEEEEE]">
-                <Zap className="w-3.5 h-3.5 text-slate-400" />
-                Top Unternehmen
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-50 rounded-full text-sm text-slate-700 border border-[#EEEEEE]">
                 <Award className="w-3.5 h-3.5 text-slate-400" />
                 Eigene Apps im Store
               </span>
@@ -70,6 +66,15 @@ const AboutCreatorSection = () => {
                 <Bot className="w-3.5 h-3.5 text-slate-400" />
                 KI-Workflow täglich
               </span>
+            </div>
+
+            <div className="mt-6">
+              <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-3">Erfahrung aus</p>
+              <div className="flex flex-wrap items-center gap-6">
+                <img src="/images/freeletics_logo.png" alt="Freeletics" className="h-5 opacity-60 hover:opacity-100 transition-all duration-300" />
+                <img src="/images/waipu_tv_logo.png" alt="waipu.tv" className="h-5 opacity-60 hover:opacity-100 transition-all duration-300" />
+                <img src="/images/payback_logo.png" alt="Payback" className="h-7 opacity-60 hover:opacity-100 transition-all duration-300" />
+              </div>
             </div>
           </motion.div>
         </div>

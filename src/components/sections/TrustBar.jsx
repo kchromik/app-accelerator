@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import { Bot, BookOpen, Layers, Users } from 'lucide-react';
 
 const stats = [
-  { icon: Bot, label: "24 KI-Agenten" },
-  { icon: BookOpen, label: "6 Module" },
-  { icon: Layers, label: "40+ Lektionen" },
+  { icon: Bot, label: "25 KI-Agenten" },
+  { icon: BookOpen, label: "6 Module + Bonus" },
+  { icon: Layers, label: "50+ Lektionen" },
   { icon: Users, label: "Exklusive Community" },
 ];
 

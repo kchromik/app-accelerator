@@ -65,9 +65,11 @@ const HeroSection = ({ scrollToPricing }) => {
                     initial="hidden"
                     animate="visible"
                     variants={wordAnimation}
-                    className={`inline-block mr-[0.25em] ${
-                      word.highlight ? 'hero-highlight' : ''
-                    }`}
+                    className={`inline-block ${
+                      word.highlight && headlineWords[i + 1]?.highlight
+                        ? 'pr-[0.25em]'
+                        : 'mr-[0.25em]'
+                    } ${word.highlight ? 'hero-highlight' : ''}`}
                   >
                     {word.text}
                   </motion.span>
@@ -82,7 +84,7 @@ const HeroSection = ({ scrollToPricing }) => {
               transition={{ duration: 0.5, delay: 0.9 }}
               className="text-lg text-slate-500 max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed"
             >
-              Lerne, wie du mit Claude Code professionelle Apps entwickelst und in 30 Tagen dein eigenes Produkt in den Store bringst.
+              Lerne, wie du mit modernen KI-Tools Apps entwickelst, die du in 30 Tagen in die Stores bringst.
             </motion.p>
 
             <motion.div

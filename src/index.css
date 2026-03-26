@@ -78,7 +78,7 @@ html {
 }
 
 .highlight-marker {
-  background: linear-gradient(to top, #e2e8f0 35%, transparent 35%);
+  background: linear-gradient(to top, #ede9fe 35%, transparent 35%);
   padding: 0 0.05em;
   border-radius: 2px;
 }
@@ -87,7 +87,7 @@ html {
   font-style: italic;
   position: relative;
   display: inline;
-  background: linear-gradient(to top, #cbd5e1 28%, transparent 28%);
+  background: linear-gradient(to top, #ddd6fe 28%, transparent 28%);
   padding: 0 0.08em;
 }
 

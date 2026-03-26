@@ -6,9 +6,9 @@ import CountdownTimer from '@/components/ui/CountdownTimer';
 import { LAUNCH_MODE, LAUNCH_END_DATE, LAUNCH_PRICE, REGULAR_PRICE, CHECKOUT_URL } from '@/config';
 
 const features = [
-  "6 Module mit 40+ Lektionen",
+  "6 Module + Bonusmodul mit über 50 Lektionen",
   "KI-Workflow-Training mit Claude Code",
-  "24 vorkonfigurierte KI-Agenten für App-Entwicklung",
+  "25 vorkonfigurierte KI-Agenten für App-Entwicklung",
   "30-Tage-Fahrplan von der Idee bis zum Launch",
   "Discord-Community",
   "Alle zukünftigen Updates"
@@ -51,7 +51,7 @@ const PricingSection = () => {
           )}
 
           <div className="mb-1">
-            <h3 className="text-lg font-semibold text-slate-900">App Accelerator</h3>
+            <h3 className="text-lg font-semibold text-slate-900">App <span className="text-violet-600">Accelerator</span></h3>
             <p className="text-sm text-slate-500">Dein Komplettkurs für App-Entwicklung mit KI</p>
           </div>
 

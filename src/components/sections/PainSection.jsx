@@ -16,7 +16,7 @@ const painPoints = [
   {
     icon: Cpu,
     title: "Die Entwicklung wartet nicht auf dich",
-    description: "Jeden Monat neue KI-Tools, neue Workflows, neue Möglichkeiten. Wer jetzt nicht lernt, mit KI zu arbeiten, verliert den Anschluss. Dauerhaft."
+    description: "Jeden Monat neue KI-Tools, neue Workflows, neue Möglichkeiten. Wer jetzt nicht lernt, mit KI zu arbeiten, verliert den Anschluss."
   }
 ];
 

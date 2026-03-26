@@ -79,9 +79,10 @@ const modules = [
     ]
   },
   {
-    number: "07",
+    number: "Bonus",
     icon: Megaphone,
     title: "Marketing & Wachstum",
+    bonus: true,
     highlight: false,
     lessons: [
       "Landing Page für deine App (inkl. GitHub Template zum Klonen)",
@@ -92,7 +93,7 @@ const modules = [
 ];
 
 const bonusItems = [
-  "24 vorkonfigurierte KI-Agenten für App-Entwicklung",
+  "25 vorkonfigurierte KI-Agenten für App-Entwicklung",
   "Lifetime Zugang zur Discord-Community",
   "Alle zukünftigen Updates inklusive",
 ];
@@ -128,6 +129,12 @@ const ModuleAccordion = ({ mod, index }) => {
               <span className="inline-flex items-center gap-1 text-xs font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded-full">
                 <Star className="w-3 h-3" />
                 Herzstück
+              </span>
+            )}
+            {mod.bonus && (
+              <span className="inline-flex items-center gap-1 text-xs font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded-full">
+                <Star className="w-3 h-3" />
+                Bonus
               </span>
             )}
           </div>
@@ -181,7 +188,7 @@ const ModulesSection = ({ scrollToPricing }) => {
             Alles was du brauchst. In einem Programm.
           </h2>
           <p className="text-base text-slate-500 max-w-xl mx-auto">
-            6 Module, 40+ Lektionen, KI-Workflow-Training, Templates und eine Community die mitzieht.
+            6 Module + Bonusmodul, über 50 Lektionen, KI-Workflow-Training, Templates und eine Community die mitzieht.
           </p>
         </motion.div>
 

@@ -2,100 +2,83 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Bot, Code, Palette, TestTube, Bug, Server, Shield, Lightbulb,
-  ChevronDown, ChevronUp, Users
+  ChevronDown, ChevronUp
 } from 'lucide-react';
 
 const departments = [
   {
     name: "Engineering",
     icon: Code,
-    color: "slate",
     agents: [
-      { title: "Software Architekt", desc: "Entwirft App-Architekturen und bewertet Trade-offs" },
+      { title: "Software Architekt", desc: "Entwirft App-Architekturen, erstellt ADRs und bewertet Trade-offs" },
       { title: "Mobile App Entwickler", desc: "Cross-Platform-Experte für SwiftUI, Compose, Flutter & React Native" },
+      { title: "SwiftUI Entwickler", desc: "iOS-Spezialist mit Swift 6.2, SwiftData, Liquid Glass und iOS 26" },
+      { title: "Android Entwickler", desc: "Kotlin 2.3, Jetpack Compose 1.10 und Material Design 3" },
+      { title: "Flutter Entwickler", desc: "Dart, Riverpod 3.x, Clean Architecture und adaptive Widgets" },
+      { title: "React Native Entwickler", desc: "Expo SDK 55, New Architecture, TypeScript und Zustand" },
+      { title: "Backend-API-Entwickler", desc: "REST/GraphQL-APIs, Auth-Flows und Offline-Sync" },
+      { title: "Firebase Developer", desc: "Auth, Firestore, Realtime DB, Cloud Functions und Analytics" },
+      { title: "Supabase Developer", desc: "Auth, Datenbank, Echtzeit, Storage und Edge Functions" },
       { title: "Code Reviewer", desc: "Prüft Code auf Qualität, Performance und Sicherheit" },
-      { title: "React Native Entwickler", desc: "Spezialist für Expo, TypeScript und Zustand" },
-      { title: "Backend-API-Entwickler", desc: "REST/GraphQL-APIs und Offline-Sync" },
-      { title: "Git-Workflow-Meister", desc: "Commits, Branches und PRs mit Best Practices" },
+      { title: "Git-Workflow-Meister", desc: "Commits, Branches und PRs mit Conventional Commits" },
       { title: "Refactoring-Experte", desc: "Systematisches Refactoring ohne Verhaltensänderung" },
-      { title: "SwiftUI Entwickler", desc: "iOS-Spezialist mit Swift 5.9+ und SwiftData" },
-      { title: "Android Entwickler", desc: "Kotlin, Jetpack Compose und Material Design 3" },
-      { title: "Flutter Entwickler", desc: "Dart, Riverpod und adaptive Widgets" },
     ]
   },
   {
     name: "Design",
     icon: Palette,
-    color: "pink",
     agents: [
-      { title: "UX Architect", desc: "User-Flows, Navigation und Informationsarchitektur" },
+      { title: "UX Architect", desc: "User-Flows, Navigationsmuster und Informationsarchitektur" },
+      { title: "UI Builder", desc: "Plattformkonforme UI-Komponenten mit Dark Mode und responsiven Layouts" },
       { title: "Barrierefreiheits-Spezialist", desc: "WCAG 2.1 AA, VoiceOver, TalkBack und Dynamic Type" },
-      { title: "UI Builder", desc: "Plattformkonforme, performante UI-Komponenten" },
     ]
   },
   {
     name: "Testing",
     icon: TestTube,
-    color: "emerald",
     agents: [
-      { title: "QA-Ingenieur", desc: "End-to-End-Teststrategien und Gerätematrix" },
-      { title: "Test-Autor", desc: "Unit-, Widget- und Integrationstests mit Randfällen" },
-      { title: "Performance-Benchmarker", desc: "60fps auf allen Geräten. Startup, Memory, CPU." },
+      { title: "QA-Ingenieur", desc: "End-to-End-Teststrategien, Gerätematrix und Beta-Koordination" },
+      { title: "Test-Autor", desc: "Unit-, Widget- und Integrationstests mit Randfallabdeckung" },
+      { title: "Performance-Benchmarker", desc: "Startup, Memory, CPU — 60fps auf allen Geräten" },
     ]
   },
   {
     name: "Debugging",
     icon: Bug,
-    color: "amber",
     agents: [
       { title: "Bug Hunter", desc: "Findet Ursachen statt Symptome zu behandeln" },
-      { title: "Crash Analyst", desc: "Analysiert Crash-Logs, ANR-Traces und Memory-Probleme" },
+      { title: "Crash Analyst", desc: "Crash-Logs, ANR-Traces, Symbolication und Memory-Probleme" },
     ]
   },
   {
     name: "DevOps",
     icon: Server,
-    color: "blue",
     agents: [
-      { title: "CI/CD Engineer", desc: "GitHub Actions, Fastlane und automatisiertes Deployment" },
-      { title: "App Store Prep", desc: "iOS-Einreichung, Screenshots und ASO" },
-      { title: "Play Store Prep", desc: "Google Play Listing, Compliance und Beta-Testing" },
+      { title: "CI/CD Engineer", desc: "GitHub Actions, Fastlane, Code Signing und automatisiertes Deployment" },
+      { title: "Store Prep", desc: "App Store & Play Store — Checklisten, Listings und Ablehnungsrisikoanalyse" },
     ]
   },
   {
     name: "Security",
     icon: Shield,
-    color: "red",
     agents: [
-      { title: "Mobile Security Auditor", desc: "OWASP Mobile Top 10, Secrets und Netzwerk-Audits" },
+      { title: "Mobile Security Auditor", desc: "OWASP Mobile Top 10, Secrets-Erkennung und Netzwerk-Audits" },
     ]
   },
   {
     name: "Product",
     icon: Lightbulb,
-    color: "orange",
     agents: [
-      { title: "Feature Planner", desc: "Architekturentscheidungen und Implementierungsreihenfolge" },
-      { title: "Codebase Analyzer", desc: "Tech-Debt-Analyse und Qualitätsbewertungen" },
+      { title: "Feature Planner", desc: "Architekturentscheidungen, Abhängigkeitsanalyse und Teststrategie" },
+      { title: "Codebase Analyzer", desc: "Tech-Debt-Analyse, Qualitätsbewertungen und CLAUDE.md-Generierung" },
     ]
   },
 ];
 
 const totalAgents = departments.reduce((sum, dept) => sum + dept.agents.length, 0);
 
-const colorMap = {
-  slate: { bg: "bg-slate-50", border: "border-slate-200/60", icon: "bg-slate-700", badge: "bg-slate-100 text-slate-700", dot: "bg-slate-400" },
-  pink: { bg: "bg-pink-50", border: "border-pink-200/60", icon: "bg-pink-600", badge: "bg-pink-100 text-pink-700", dot: "bg-pink-400" },
-  emerald: { bg: "bg-emerald-50", border: "border-emerald-200/60", icon: "bg-emerald-600", badge: "bg-emerald-100 text-emerald-700", dot: "bg-emerald-400" },
-  amber: { bg: "bg-amber-50", border: "border-amber-200/60", icon: "bg-amber-600", badge: "bg-amber-100 text-amber-700", dot: "bg-amber-400" },
-  blue: { bg: "bg-blue-50", border: "border-blue-200/60", icon: "bg-blue-600", badge: "bg-blue-100 text-blue-700", dot: "bg-blue-400" },
-  red: { bg: "bg-red-50", border: "border-red-200/60", icon: "bg-red-600", badge: "bg-red-100 text-red-700", dot: "bg-red-400" },
-  orange: { bg: "bg-orange-50", border: "border-orange-200/60", icon: "bg-orange-600", badge: "bg-orange-100 text-orange-700", dot: "bg-orange-400" },
-};
-
 const DepartmentCard = ({ dept, index }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const colors = colorMap[dept.color];
 
   return (
     <motion.div
@@ -103,19 +86,19 @@ const DepartmentCard = ({ dept, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: index * 0.05 }}
       viewport={{ once: true }}
-      className={`rounded-xl border overflow-hidden ${colors.bg} ${colors.border}`}
+      className="rounded-xl border border-slate-200/80 bg-white overflow-hidden"
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-4 p-4 w-full text-left"
+        className="flex items-center gap-4 p-4 w-full text-left hover:bg-slate-50/50 transition-colors duration-150"
       >
-        <div className={`flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center ${colors.icon}`}>
-          <dept.icon className="w-4 h-4 text-white" />
+        <div className="flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center bg-slate-100">
+          <dept.icon className="w-4 h-4 text-slate-600" />
         </div>
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 flex-wrap">
+          <div className="flex items-center gap-2.5 flex-wrap">
             <h3 className="text-sm font-semibold text-slate-900">{dept.name}</h3>
-            <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${colors.badge}`}>
+            <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-slate-100 text-slate-500">
               {dept.agents.length} {dept.agents.length === 1 ? 'Agent' : 'Agenten'}
             </span>
           </div>
@@ -134,10 +117,10 @@ const DepartmentCard = ({ dept, index }) => {
             transition={{ duration: 0.2, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="px-4 pb-4 space-y-2.5">
+            <div className="px-4 pb-4 space-y-1.5">
               {dept.agents.map((agent, i) => (
-                <div key={i} className="flex items-start gap-3 bg-white/70 rounded-lg p-3">
-                  <div className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 ${colors.dot}`} />
+                <div key={i} className="flex items-start gap-3 rounded-lg p-2.5 bg-slate-50/80">
+                  <div className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 bg-slate-300" />
                   <div>
                     <p className="text-sm font-medium text-slate-800">{agent.title}</p>
                     <p className="text-xs text-slate-500 mt-0.5">{agent.desc}</p>
@@ -154,7 +137,7 @@ const DepartmentCard = ({ dept, index }) => {
 
 const AgentsSection = () => {
   return (
-    <section id="agents" className="py-20 md:py-28 bg-white border-t border-[#EEEEEE]">
+    <section id="agents" className="py-20 md:py-28 bg-slate-50/50 border-t border-[#EEEEEE]">
       <div className="max-w-3xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -163,7 +146,7 @@ const AgentsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-1.5 mb-5 px-3 py-1 rounded-full bg-slate-50 border border-[#EEEEEE]">
+          <div className="inline-flex items-center gap-1.5 mb-5 px-3 py-1 rounded-full bg-white border border-slate-200/80">
             <Bot className="w-3 h-3 text-slate-400" />
             <span className="text-xs font-medium text-slate-500">Inklusive</span>
           </div>
@@ -171,7 +154,7 @@ const AgentsSection = () => {
             Deine komplette KI-Abteilung. {totalAgents} Spezialisten.
           </h2>
           <p className="text-base text-slate-500 max-w-xl mx-auto">
-            Vorkonfigurierte KI-Agenten für jede Phase der App-Entwicklung. Von Architektur über Testing bis zum Store-Launch. Wie eine eigene IT-Abteilung, die mit dir arbeitet.
+            Vorkonfigurierte KI-Agenten für jede Phase der App-Entwicklung. Von Architektur über Testing bis zum Store-Launch.
           </p>
         </motion.div>
 
@@ -188,7 +171,7 @@ const AgentsSection = () => {
             { label: "Plattformen", value: "4+" },
             { label: "Sofort einsatzbereit", value: "Ja" },
           ].map((stat, i) => (
-            <div key={i} className="bg-slate-50 rounded-xl border border-[#EEEEEE] p-4 text-center">
+            <div key={i} className="bg-white rounded-xl border border-slate-200/80 p-4 text-center">
               <p className="text-2xl font-bold text-slate-900">{stat.value}</p>
               <p className="text-xs text-slate-500 mt-1">{stat.label}</p>
             </div>

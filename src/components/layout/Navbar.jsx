@@ -45,7 +45,7 @@ const Navbar = ({ scrollToPricing }) => {
             >
               <img src="/images/logo.png" alt="Logo" className="h-8 w-auto rounded-lg" />
               <span className="font-semibold text-slate-900 hidden sm:inline" style={{fontFamily: "'Outfit', sans-serif", letterSpacing: '-0.02em'}}>
-                App Accelerator
+                App <span className="text-violet-600">Accelerator</span>
               </span>
             </a>
 

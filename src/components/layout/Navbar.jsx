@@ -14,13 +14,26 @@ const navItems = [
 
 const Navbar = ({ scrollToPricing }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isPricingVisible, setIsPricingVisible] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const pricingEl = document.getElementById('pricing');
+    if (!pricingEl) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsPricingVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    observer.observe(pricingEl);
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -43,7 +56,7 @@ const Navbar = ({ scrollToPricing }) => {
                 setIsMobileMenuOpen(false);
               }}
             >
-              <img src="/images/logo.png" alt="Logo" className="h-8 w-auto rounded-lg" />
+              <img src="/images/logo.webp" alt="Logo" className="h-8 w-auto rounded-lg" width="32" height="32" />
               <span className="font-semibold text-slate-900 hidden sm:inline" style={{fontFamily: "'Outfit', sans-serif", letterSpacing: '-0.02em'}}>
                 App <span className="text-violet-600">Accelerator</span>
               </span>
@@ -63,7 +76,7 @@ const Navbar = ({ scrollToPricing }) => {
                 onClick={scrollToPricing}
                 className="bg-slate-900 hover:bg-slate-800 text-white px-5 py-2 text-sm font-medium rounded-full transition-colors"
               >
-                Jetzt starten →
+                Jetzt starten
               </button>
             </div>
 
@@ -102,20 +115,20 @@ const Navbar = ({ scrollToPricing }) => {
                 }}
                 className="bg-slate-900 text-white py-3 rounded-full font-medium"
               >
-                Jetzt starten →
+                Jetzt starten
               </button>
             </div>
           </div>
         )}
       </nav>
 
-      {isScrolled && (
+      {isScrolled && !isPricingVisible && (
         <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/90 backdrop-blur-xl border-t border-slate-200/50 p-3 px-6">
           <button
             onClick={scrollToPricing}
             className="w-full bg-slate-900 hover:bg-slate-800 text-white py-3.5 rounded-full text-sm font-medium transition-colors"
           >
-            Jetzt starten →
+            Jetzt starten
           </button>
         </div>
       )}

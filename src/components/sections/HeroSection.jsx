@@ -50,9 +50,11 @@ const HeroSection = ({ scrollToPricing }) => {
               className="inline-flex items-center gap-2 mb-5 bg-slate-100 rounded-full pl-1 pr-4 py-1"
             >
               <img
-                src="/images/profile.png"
+                src="/images/profile.webp"
                 alt="Kevin Chromik"
                 className="w-7 h-7 rounded-full object-cover object-top"
+                width="28"
+                height="28"
               />
               <span className="text-sm text-slate-600">mit Kevin Chromik</span>
             </motion.div>

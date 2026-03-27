@@ -57,7 +57,7 @@ const FaqItem = ({ question, answer }) => {
 
 const FaqSection = () => {
   return (
-    <section id="faq" className="py-20 md:py-28 bg-slate-50">
+    <section id="faq" className="py-14 md:py-20 bg-slate-50">
       <div className="max-w-3xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /starter-kit
+
+Sitemap: https://app-accelerator.kevinchromik.de/sitemap.xml

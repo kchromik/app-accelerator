@@ -127,7 +127,7 @@ const ModuleAccordion = ({ mod, index }) => {
             <h3 className="text-sm font-semibold text-slate-900">{mod.title}</h3>
             {mod.highlight && (
               <span className="inline-flex items-center gap-1 text-xs font-medium bg-slate-100 text-slate-700 px-2 py-0.5 rounded-full">
-                <img src="/images/claude_logo.png" alt="Claude" className="h-3" />
+                <img src="/images/claude_logo.webp" alt="Claude" className="h-3" loading="lazy" />
               </span>
             )}
             {mod.bonus && (
@@ -170,7 +170,7 @@ const ModuleAccordion = ({ mod, index }) => {
 
 const ModulesSection = ({ scrollToPricing }) => {
   return (
-    <section id="modules" className="py-20 md:py-28 bg-white">
+    <section id="modules" className="py-14 md:py-20 bg-white">
       <div className="max-w-3xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -184,10 +184,10 @@ const ModulesSection = ({ scrollToPricing }) => {
             <span className="text-xs font-medium text-slate-500">Die Lösung</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-            Alles was du brauchst. In einem Programm.
+            Von der Idee zur fertigen App. In 30 Tagen.
           </h2>
           <p className="text-base text-slate-500 max-w-xl mx-auto">
-            6 Module + Bonusmodul, über 50 Lektionen, KI-Workflow-Training, Templates und eine Community die mitzieht.
+            6 Module führen dich Schritt für Schritt - von der ersten Idee über die Entwicklung mit KI bis zum Launch im App Store.
           </p>
         </motion.div>
 
@@ -224,7 +224,7 @@ const ModulesSection = ({ scrollToPricing }) => {
             size="lg"
             className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 text-base font-medium rounded-full transition-colors duration-200"
           >
-            Jetzt starten
+            Alle Module entdecken
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
         </motion.div>

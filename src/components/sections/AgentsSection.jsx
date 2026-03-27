@@ -39,7 +39,7 @@ const departments = [
     agents: [
       { title: "QA-Ingenieur", desc: "End-to-End-Teststrategien, Gerätematrix und Beta-Koordination" },
       { title: "Test-Autor", desc: "Unit-, Widget- und Integrationstests mit Randfallabdeckung" },
-      { title: "Performance-Benchmarker", desc: "Startup, Memory, CPU — 60fps auf allen Geräten" },
+      { title: "Performance-Benchmarker", desc: "Startup, Memory, CPU - 60fps auf allen Geräten" },
     ]
   },
   {
@@ -55,7 +55,7 @@ const departments = [
     icon: Server,
     agents: [
       { title: "CI/CD Engineer", desc: "GitHub Actions, Fastlane, Code Signing und automatisiertes Deployment" },
-      { title: "Store Prep", desc: "App Store & Play Store — Checklisten, Listings und Ablehnungsrisikoanalyse" },
+      { title: "Store Prep", desc: "App Store & Play Store - Checklisten, Listings und Ablehnungsrisikoanalyse" },
     ]
   },
   {
@@ -137,7 +137,7 @@ const DepartmentCard = ({ dept, index }) => {
 
 const AgentsSection = () => {
   return (
-    <section id="agents" className="py-20 md:py-28 bg-slate-50">
+    <section id="agents" className="py-14 md:py-20 bg-slate-50">
       <div className="max-w-3xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

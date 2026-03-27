@@ -4,7 +4,7 @@ import { Briefcase, Zap, Award, Bot, User } from 'lucide-react';
 
 const AboutCreatorSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-slate-50">
+    <section className="py-14 md:py-20 bg-slate-50">
       <div className="max-w-5xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,10 @@ const AboutCreatorSection = () => {
             <img
               className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover object-top"
               alt="Kevin Chromik"
-              src="/images/profile.png"
+              src="/images/profile.webp"
+              loading="lazy"
+              width="320"
+              height="320"
             />
           </motion.div>
           <motion.div
@@ -71,9 +74,9 @@ const AboutCreatorSection = () => {
             <div className="mt-6">
               <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-3">Erfahrung aus</p>
               <div className="flex flex-wrap items-center gap-6">
-                <img src="/images/freeletics_logo.png" alt="Freeletics" className="h-5 opacity-60 hover:opacity-100 transition-all duration-300" />
-                <img src="/images/waipu_tv_logo.png" alt="waipu.tv" className="h-5 opacity-60 hover:opacity-100 transition-all duration-300" />
-                <img src="/images/payback_logo.png" alt="Payback" className="h-7 opacity-60 hover:opacity-100 transition-all duration-300" />
+                <img src="/images/freeletics_logo.webp" alt="Freeletics" className="h-5 opacity-60 hover:opacity-100 transition-all duration-300" loading="lazy" />
+                <img src="/images/waipu_tv_logo.webp" alt="waipu.tv" className="h-5 opacity-60 hover:opacity-100 transition-all duration-300" loading="lazy" />
+                <img src="/images/payback_logo.webp" alt="Payback" className="h-7 opacity-60 hover:opacity-100 transition-all duration-300" loading="lazy" />
               </div>
             </div>
           </motion.div>

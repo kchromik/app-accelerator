@@ -22,7 +22,7 @@ const causes = [
 
 const UrsacheSection = () => {
   return (
-    <section id="ablauf" className="py-20 md:py-28 bg-slate-50">
+    <section id="ablauf" className="py-14 md:py-20 bg-slate-50">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

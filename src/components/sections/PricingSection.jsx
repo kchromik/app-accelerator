@@ -10,13 +10,13 @@ const features = [
   "KI-Workflow-Training mit Claude Code",
   "25 vorkonfigurierte KI-Agenten für App-Entwicklung",
   "30-Tage-Fahrplan von der Idee bis zum Launch",
-  "Discord-Community",
+  "Exklusive Discord-Community",
   "Alle zukünftigen Updates"
 ];
 
 const PricingSection = () => {
   return (
-    <section id="pricing" className="py-20 md:py-28 bg-white">
+    <section id="pricing" className="py-14 md:py-20 bg-white">
       <div className="max-w-lg mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -90,8 +90,9 @@ const PricingSection = () => {
             <Button
               size="lg"
               className="w-full rounded-full bg-slate-900 hover:bg-slate-800 text-white py-4 text-base"
+              onClick={() => { if (typeof fbq === 'function') fbq('track', 'InitiateCheckout'); }}
             >
-              Jetzt starten
+              Jetzt Zugang sichern
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </a>

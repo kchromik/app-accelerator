@@ -11,7 +11,7 @@ const features = [
   "25 vorkonfigurierte KI-Agenten für App-Entwicklung",
   "30-Tage-Fahrplan von der Idee bis zum Launch",
   "Exklusive Discord-Community",
-  "Alle zukünftigen Updates"
+  "Alle Updates inklusive"
 ];
 
 const PricingSection = () => {
@@ -29,7 +29,7 @@ const PricingSection = () => {
             Einmal zahlen. Kein Abo.
           </h2>
           <p className="text-lg text-slate-500">
-            Du zahlst einmal und hast uneingeschränkt Zugang zu allen Modulen, Updates und der Community.
+            Du zahlst einmal und hast jederzeit Zugang zu allen Modulen, Updates und der Community.
           </p>
         </motion.div>
 

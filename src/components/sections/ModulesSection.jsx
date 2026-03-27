@@ -95,7 +95,7 @@ const modules = [
 const bonusItems = [
   "25 vorkonfigurierte KI-Agenten für App-Entwicklung",
   "Zugang zur Discord-Community",
-  "Alle zukünftigen Updates inklusive",
+  "Alle Updates inklusive",
 ];
 
 const ModuleAccordion = ({ mod, index }) => {

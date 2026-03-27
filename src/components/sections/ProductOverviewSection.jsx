@@ -38,7 +38,7 @@ const pillars = [
     description: "Über 50 Lektionen führen dich Schritt für Schritt von der Idee bis zum App Store Launch. Mit echten Praxis-Projekten, nicht nur Theorie.",
     image: "/images/schulungsinhalte.webp",
     imageAlt: "Kursplattform mit Modul-Übersicht und Video-Lektion",
-    highlights: ["50+ Video-Lektionen", "Praxis-Projekte", "Lebenslanger Zugang"],
+    highlights: ["50+ Video-Lektionen", "Praxis-Projekte", "24/7 Zugang"],
   },
   {
     icon: Bot,
